@@ -1,149 +1,90 @@
 
-# Project Title
+# PG PERFECT
 
-PG-Perfect: PG management system 
-
-PG-Perfect offers a user-friendly interface designed for both PG owners and tenants searching for accommodations. PG owners can efficiently manage their properties, monitor progress, view feedback, and address complaints via the admin dashboard. The platform automatically lists nearby PGs based on ratings, allowing users to connect directly with owners. Tenants can also submit complaints, pay rent, and make deposits easily through their personalized dashboard.
-
-
+The PG Management System is a comprehensive web application designed to facilitate seamless interaction between PG owners and tenants.
 
 
 ## Features
-*Owner Features*
-- **Login and Signup Authentication**: Email and password validation with encrypted password storage for secure authentication.
-- **Add New Buildings**: Owners can provide the property name, category (Boys, Girls, Co-ed), list of facilities, property photos, description, starting price, and address to add new buildings.
-- **Add Tenants**: Select the relevant property and input tenant details such as name, email, phone number, room sharing type, room number, rent amount, and deposit amount. Upon successful addition, an email is sent to the tenant with login credentials for their dashboard.
-- **View Building Data and Manage Feedback**: Owners can view comprehensive data for all buildings, including complaints, feedback, and ratings. They can respond to or resolve complaints within a week, or the system will automatically reduce the building's rating.
-- **Dynamic Owner Dashboard**: The dashboard is responsive and provides insights into overall revenue and individual building revenue. It also displays complaints in an easy-to-analyze graphical format.
 
-*User Features*
+### PG Owners:
+- Effortlessly manage **property details** and **tenant records**.
+- Track and monitor **rent payments** and **security deposits** with ease.
+- Quickly respond to **tenant complaints** and **service requests**.
 
-- **Search for PGs**: Tenants can search for accommodations based on their location, with nearby PGs displayed in order of ratings.
-- **Contact PG Owners**: Send an email to the PG owner containing the tenant’s name, phone number, and the selected building, so the owner can reach out.
-- **Receive Login Credentials**: Once the tenant is added to a building and assigned a room, they will receive an email with login credentials (ID and password) to access their tenant dashboard.
-- **Tenant Dashboard**: Through the dashboard, tenants can lodge complaints, pay rent, and deposit money directly from the website.
-- **Admin Fee**: 10% of the tenant’s deposit amount will be transferred to the admin account as a platform fee, charged to the owner.
-- **Submit Feedback**: User can provide feedback on the PG and its services
+### Tenants:
+- Conveniently submit **complaints** and **service requests** to the owner.
+- Make **secure online payments** for rent and deposits.
+- Access important details like **property information** and **payment history** at any time.
 
+## Technologies Used
 
+### Frontend:
+- **React**: Frontend library for building user interfaces.
+- **Redux**: Used for state management and caching with local storage.
+- **Tailwind CSS** and **DaisyUI**: For styling and responsive design.
+- **React-Chart**: Used to create visual graphs and charts.
+- **Axios**: For making API requests and connecting to the backend.
 
-## Tech Stack
+### Backend:
+- **Node.js** and **Express.js**: Backend framework for building RESTful APIs.
+- **Nodemailer**: For sending emails from the server.
+- **Cloudinary**: Cloud storage service for images.
+- **Multer**: Middleware for handling file uploads, setting size limits, and integrating with Cloudinary.
+- **Bcrypt** and **Crypto**: For password hashing and creating secure tokens.
 
-**Frontend:** 
+### Database:
+- **MongoDB**: NoSQL database for managing data.
 
-Tailwind CSS & DaisyUI: For modern, responsive, and accessible design.
+### Tools:
+- **Postman**: For testing and interacting with the backend API.
+- **Vite**: Used for creating and optimizing the React project.
+## Usage
 
-React: For building the dynamic user interface.
+### Flow of the Application:
 
-Redux: For state management.
+1. **Landing Page**:  
+   - Both PG Owners and Tenants can log in or register.
 
-Axios: For making HTTP requests.
+---
 
-**Backend:** 
+### For PG Owners:
+2. **Dashboard**:  
+   - View a dashboard displaying charts for:
+     - Total Income.
+     - Complaints categorized by sectors like food, cleanliness, etc.
+   - Manage properties and tenants:
+     - Add buildings and assign tenants to respective properties.
+     - Monitor tenant details and rent status.
+   - Handle Payments:
+     - Accept rent and deposits from tenants through a secure payment system.
 
-Node and Express.js: For backend development.
+---
 
-MongoDB: For database management.
+### For Tenants:
+3. **Dashboard**:
+   - Lodge Complaints:
+     - Submit complaints regarding food, cleanliness, or other concerns.
+   - Payments:
+     - Pay rent and deposits online.
+   - Search for PGs:
+     - Browse and search for available PGs based on location, price, and other criteria.
 
-bcrypt: For password hashing.
+---
 
-Cloudinary: For image and video storage.
+### Application Flow Summary:
 
-Razorpay: For payment integration.
+1. **User logs in**:  
+   - PG Owner or Tenant chooses the appropriate login method from the landing page.
 
+2. **PG Owner** navigates to their dashboard to:
+   - Monitor complaints and income through visual charts.
+   - Add new buildings or tenants.
+   - Accept payments from tenants.
 
-## Environment Variables
+3. **Tenant** navigates to their dashboard to:
+   - Lodge complaints.
+   - Pay rent and deposits.
+   - Search for available PGs.
 
-To run this project, you will need to add the following environment variables to your .env file
-
-- Port in which backend will be running
-`PORT`
-
-- MongoDB connection string
-`MONGO_URI`
-
-- JWT secret key for authentication
-`JWT_SECRET_CODE`
-
-- Cors origin
-`CLIENT_URL`
-
-- Cloudinary credentials for image and video storage
-`CLOUD_NAME`
-`API_KEY`
-`API_SECRET`
-
-- Email service credentials for sending emails
-`GMAIL_APP_ID`
-`GMAIL_APP_PASSWORD`
-
-- Razorpay credentials for payment integration
-`RAZORPAY_KEY_ID`
-`RAZORPAY_SECRET_KEY`
-`RAZORPAY_PLAN_ID`
-
-- For creating axios instance to connect frontend with backend
-`VITE_BASE_URL`
-
-
-## Installation
-
-
-Follow these steps to set up the project on your local machine:
-
-Prerequisites
-- Ensure you have react with vite, Node.js and npm installed on your system.
-- Make sure you have MongoDB installed and running.
-
-Clone the Repository
-
-```bash
-git clone https://github.com/M-D-Nadeem/PG-Perfect.git
-```
-
-Install Dependencies
-
-- Install the backend dependencies
-
-```bash
-  cd backend
-  npm install 
-  cd..
-```
-- Install the frontend dependencies
-    
-```bash
-  cd frontend
-  cd perfect-pg-front
-  npm install 
-  cd..
-```
-## Deployment
-
-To run this project
-
-Start the backend server:
-
-```bash
-  cd backend
-  npm run start
-```
-
-Start the frontend development server:
-
-```bash
-  cd frontend
-  cd perfect-pg-front
-  npm run start
-```
-
-
-## Authors
-
-- [@MD Nadeem](https://github.com/M-D-Nadeem)
-
-
-## Demo
-
-
-https://youtu.be/SQVBaJzQIPg
+## Demo of the project
+https://github.com/user-attachments/assets/1754e816-4daa-46ad-b3a2-cb88fe36af0d
